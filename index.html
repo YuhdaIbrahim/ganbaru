@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-lang="en">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,11 +18,6 @@
   a { color:var(--accent); }
   .wrap { max-width:980px; margin:0 auto; padding:0 20px; }
 
-  /* language switch: show only the chosen language */
-  html[data-lang="en"] [lang="id"], html[data-lang="id"] [lang="en"] { display:none !important; }
-  .switch { display:flex; gap:6px; justify-content:flex-end; padding:16px 0 0; }
-  .switch button { font:inherit; font-size:.9rem; cursor:pointer; border:1px solid rgba(37,48,94,.2); background:#fff; color:var(--ink); padding:5px 14px; border-radius:999px; }
-  html[data-lang="en"] .switch [data-set="en"], html[data-lang="id"] .switch [data-set="id"] { background:var(--accent); border-color:var(--accent); color:#fff; }
 
   .hero { text-align:center; padding:28px 0 12px; }
   .hero img.icon { width:112px; height:112px; border-radius:26px; box-shadow:0 8px 24px rgba(37,48,94,.18); }
@@ -54,96 +49,57 @@
 <body>
 <div class="wrap">
 
-  <div class="switch" role="group" aria-label="Language">
-    <button type="button" data-set="en">English</button>
-    <button type="button" data-set="id">Indonesia</button>
-  </div>
 
   <header class="hero">
     <img class="icon" src="assets/icon.png" alt="Ganbaru app icon">
     <h1>Ganbaru</h1>
     <div class="jp">頑張る</div>
-    <p class="tag" lang="en">Learn Japanese with short lessons, speaking practice and real conversations.</p>
-    <p class="tag" lang="id">Belajar bahasa Jepang lewat pelajaran singkat, latihan bicara, dan percakapan nyata.</p>
+    <p class="tag">Learn Japanese with short lessons, speaking practice and real conversations.</p>
     <a class="cta" id="play" href="https://play.google.com/store/apps/details?id=com.yuhdaibrahim.ganbaru_learn_japanese">
-      <span lang="en">Get it on Google Play</span><span lang="id">Dapatkan di Google Play</span>
+      <span>Get it on Google Play</span>
     </a>
-    <p class="note" lang="en">Free to start. English and Bahasa Indonesia.</p>
-    <p class="note" lang="id">Gratis untuk dimulai. Bahasa Indonesia dan Inggris.</p>
+    <p class="note">Free to start. Available in English and Bahasa Indonesia.</p>
   </header>
 
-  <div class="shots" id="shots" aria-label="Screenshots"></div>
+  <div class="shots" aria-label="Screenshots">
+    <img src="assets/en/01.jpg" alt="Screenshot 1" loading="lazy">
+    <img src="assets/en/02.jpg" alt="Screenshot 2" loading="lazy">
+    <img src="assets/en/03.jpg" alt="Screenshot 3" loading="lazy">
+    <img src="assets/en/04.jpg" alt="Screenshot 4" loading="lazy">
+    <img src="assets/en/05.jpg" alt="Screenshot 5" loading="lazy">
+    <img src="assets/en/06.jpg" alt="Screenshot 6" loading="lazy">
+  </div>
 
-  <h2 lang="en">Everything you need to start speaking</h2>
-  <h2 lang="id">Semua yang kamu butuhkan untuk mulai berbicara</h2>
+  <h2>Everything you need to start speaking</h2>
 
   <section class="grid">
-    <div class="card" lang="en"><h3>38 topics, 228 lessons</h3><p>From greetings and numbers to food, travel and emergencies, one short lesson at a time.</p></div>
-    <div class="card" lang="id"><h3>38 topik, 228 pelajaran</h3><p>Dari sapaan dan angka sampai makanan, perjalanan, dan keadaan darurat, satu pelajaran singkat setiap kali.</p></div>
+    <div class="card"><h3>38 topics, 228 lessons</h3><p>From greetings and numbers to food, travel and emergencies, one short lesson at a time.</p></div>
 
-    <div class="card" lang="en"><h3>Four exercise types</h3><p>Match the picture, build the sentence, fill the blank and say it out loud.</p></div>
-    <div class="card" lang="id"><h3>Empat jenis latihan</h3><p>Cocokkan gambar, susun kalimat, isi bagian kosong, dan ucapkan langsung.</p></div>
+    <div class="card"><h3>Four exercise types</h3><p>Match the picture, build the sentence, fill the blank and say it out loud.</p></div>
 
-    <div class="card" lang="en"><h3>Speaking practice</h3><p>Hold the microphone, say the phrase and get instant feedback in a friendly chat.</p></div>
-    <div class="card" lang="id"><h3>Latihan berbicara</h3><p>Tahan mikrofon, ucapkan frasanya, dan dapatkan umpan balik langsung dalam chat yang ramah.</p></div>
+    <div class="card"><h3>Speaking practice</h3><p>Hold the microphone, say the phrase and get instant feedback in a friendly chat.</p></div>
 
-    <div class="card" lang="en"><h3>Real-life conversations</h3><p>Restaurants, hotels, tickets, shopping, taxis and career dialogues.</p></div>
-    <div class="card" lang="id"><h3>Percakapan nyata</h3><p>Restoran, hotel, tiket, belanja, taksi, dan dialog karier.</p></div>
+    <div class="card"><h3>Real-life conversations</h3><p>Restaurants, hotels, tickets, shopping, taxis and career dialogues.</p></div>
 
-    <div class="card" lang="en"><h3>Remember what you learn</h3><p>Save phrases, review them with flashcards and keep your daily streak.</p></div>
-    <div class="card" lang="id"><h3>Ingat yang dipelajari</h3><p>Simpan frasa, ulas dengan kartu flash, dan jaga streak harianmu.</p></div>
+    <div class="card"><h3>Remember what you learn</h3><p>Save phrases, review them with flashcards and keep your daily streak.</p></div>
 
-    <div class="card" lang="en"><h3>Made for beginners</h3><p>Aimed at JLPT N5, with romaji and meanings in English or Indonesian.</p></div>
-    <div class="card" lang="id"><h3>Untuk pemula</h3><p>Ditujukan untuk JLPT N5, dengan romaji dan arti dalam bahasa Indonesia atau Inggris.</p></div>
+    <div class="card"><h3>Made for beginners</h3><p>Aimed at JLPT N5, with romaji and meanings in English or Indonesian.</p></div>
   </section>
 
   <section class="premium">
-    <h2 lang="en">Go Premium</h2>
-    <h2 lang="id">Berlangganan Premium</h2>
-    <p lang="en">Remove ads and open every topic and conversation from day one. Choose weekly, monthly or yearly (with a 3-day free trial for new subscribers) or buy lifetime access once.</p>
-    <p lang="id">Hilangkan iklan dan buka semua topik dan percakapan sejak hari pertama. Pilih mingguan, bulanan, atau tahunan (dengan uji coba gratis 3 hari untuk pelanggan baru) atau beli akses seumur hidup sekali bayar.</p>
+    <h2>Go Premium</h2>
+    <p>Remove ads and open every topic and conversation from day one. Choose weekly, monthly or yearly (with a 3-day free trial for new subscribers) or buy lifetime access once.</p>
   </section>
 
   <footer>
     <nav>
-      <a href="privacy.html"><span lang="en">Privacy Policy</span><span lang="id">Kebijakan Privasi</span></a>
-      <a href="terms.html"><span lang="en">Terms of Use</span><span lang="id">Ketentuan Penggunaan</span></a>
+      <a href="privacy.html"><span>Privacy Policy</span></a>
+      <a href="terms.html"><span>Terms of Use</span></a>
       <a href="mailto:developerx168@gmail.com">developerx168@gmail.com</a>
     </nav>
     <div>&copy; 2026 4K Anime Wallpapers Dev</div>
   </footer>
 </div>
 
-<script>
-(function () {
-  var root = document.documentElement;
-  var stored = null;
-  try { stored = localStorage.getItem("ganbaru-lang"); } catch (e) {}
-  var lang = stored || ((navigator.language || "en").toLowerCase().indexOf("id") === 0 ? "id" : "en");
-
-  function render(l) {
-    root.setAttribute("data-lang", l);
-    root.setAttribute("lang", l);
-    var box = document.getElementById("shots");
-    box.innerHTML = "";
-    for (var i = 1; i <= 6; i++) {
-      var img = new Image();
-      img.src = "assets/" + l + "/0" + i + ".jpg";
-      img.alt = (l === "id" ? "Tangkapan layar " : "Screenshot ") + i;
-      img.loading = "lazy";
-      box.appendChild(img);
-    }
-  }
-  render(lang);
-
-  Array.prototype.forEach.call(document.querySelectorAll(".switch button"), function (b) {
-    b.addEventListener("click", function () {
-      var l = b.getAttribute("data-set");
-      try { localStorage.setItem("ganbaru-lang", l); } catch (e) {}
-      render(l);
-    });
-  });
-})();
-</script>
 </body>
 </html>
